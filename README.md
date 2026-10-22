@@ -1,6 +1,6 @@
 # satellite-cascade
 
-Code for the post *Finding Every Platform in the Gulf Without Looking Everywhere* ([link to post]).
+Code for the post *Finding Every Platform in the Gulf Without Looking Everywhere* ([blog/post.md](blog/post.md)).
 
 A two-stage detector for offshore oil and gas structures on the Texas and Louisiana shelf, built from free satellite
 data and published models, and run as a distributed [Flyte 2](https://flyte.org) pipeline:
