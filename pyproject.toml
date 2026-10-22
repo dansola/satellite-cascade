@@ -1,0 +1,27 @@
+[project]
+name = "satellite-cascade"
+version = "0.1.0"
+description = "Two-stage offshore platform detection: Sentinel-1 radar screen, then Satlas on Sentinel-2, run as a Flyte 2 pipeline"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+  "flyte>=2.10",
+  "numpy",
+  "scipy",
+  "pandas",
+  "pyproj",
+  "shapely",
+  "rasterio<1.5",
+  "pystac-client",
+  "torch",
+  "torchvision",
+  "rslearn",
+  "einops",
+  "safetensors>=0.8.0",
+]
+
+[dependency-groups]
+figures = ["matplotlib"]
+
+[tool.uv]
+# rslearn pulls dataset-ingest extras (soilgrids -> netcdf4 needs system libs) that inference does not use.
+override-dependencies = ["soilgrids; python_version < '0'"]
